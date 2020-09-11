@@ -49,12 +49,5 @@ def exercise9():
 
 
 if __name__ == "__main__":
-    runall({
-        "Exercise 2-3": exercise3,
-        "Exercise 2-4": exercise4,
-        "Exercise 2-5": exercise5,
-        "Exercise 2-6": exercise6,
-        "Exercise 2-7": exercise7,
-        "Exercise 2-8": exercise8,
-        "Exercise 2-9": exercise9
-    })
+    import crash_course.chapter2 as module
+    runall(module, "exercise")
