@@ -1,4 +1,5 @@
 from util.runner import runall
+from importlib import import_module
 
 
 def exercise3():
@@ -49,5 +50,4 @@ def exercise9():
 
 
 if __name__ == "__main__":
-    import crash_course.chapter2 as module
-    runall(module, "exercise")
+    runall(import_module(__name__), "exercise")

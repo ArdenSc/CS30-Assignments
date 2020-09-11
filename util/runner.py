@@ -1,11 +1,11 @@
-from typing import Any
+from types import ModuleType
 
 
-def runall(module: Any, startswith: str):
+def runall(module: ModuleType, startswith: str):
     for i in dir(module):
-        if i.startswith(startswith):
-            item = getattr(module, i)
-            if callable(item):
-                print(f"{i}\n")
-                item()
-                print("")
+        if not i.startswith(startswith): continue
+        item = getattr(module, i)
+        if not callable(item): continue
+        print(f"{i}\n")
+        item()
+        print("")
