@@ -35,7 +35,7 @@ def exercise5():
     for guest in guests:
         print(message.format(guest))
     print("Sadly Jeff Bezos will not be able to attend")
-    guests.remove("Jeff Bezos")
+    guests[0] = "Steve Jobs"
     for guest in guests:
         print(message.format(guest))
 
