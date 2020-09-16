@@ -77,7 +77,7 @@ def exercise7():
 
 
 def exercise8():
-    locations = ["Paris", "Tokyo", "Athens"]
+    locations = ["Paris", "Tokyo", "Athens", "California", "Rome"]
     print(locations)
     print(sorted(locations))
     print(locations)
