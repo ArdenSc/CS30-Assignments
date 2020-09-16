@@ -76,5 +76,30 @@ def exercise7():
     print(guests)
 
 
+def exercise8():
+    locations = ["Paris", "Tokyo", "Athens"]
+    print(locations)
+    print(sorted(locations))
+    print(locations)
+    print(sorted(locations, reverse=True))
+    print(locations)
+    locations.reverse()
+    print(locations)
+    locations.reverse()
+    print(locations)
+    locations.sort()
+    print(locations)
+    locations.reverse()
+    print(locations)
+
+
+def exercise9():
+    guests = ["Jeff Bezos", "Bill Gates", "Elon Musk"]
+    message = "Dear {}, I would like to invite you to dinner."
+    for guest in guests:
+        print(message.format(guest))
+    print(f"{len(guests)} guests are invited for dinner.")
+
+
 if __name__ == "__main__":
     runall(import_module(__name__), "exercise")
