@@ -4,10 +4,8 @@
 # An example program that takes normal lists and
 # prints them as formatted numerical lists.
 
-from typing import List
 
-
-def num_list(name: str, list: List[str]):
+def num_list(name, list):
     """Prints numerical list with one item per line.
 
     Args:
@@ -17,6 +15,7 @@ def num_list(name: str, list: List[str]):
     print(f"{name}:")
     for index, value in enumerate(list):
         print(f"{index + 1}: {value.capitalize()}")
+
 
 # Define the lists.
 player_weapons = ["sword", "dagger", "club"]
