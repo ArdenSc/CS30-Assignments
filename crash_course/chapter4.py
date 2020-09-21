@@ -70,5 +70,18 @@ def exercise11():
         print(pizza)
 
 
+def exercise13():
+    foods = ("chicken", "eggs", "salad", "soup", "steak")
+    for food in foods:
+        print(food)
+    try:
+        foods[0] = "bacon"
+    except TypeError:
+        print("Can't assign to tuple")
+    foods = ("chicken", "eggs", "salad", "sushi", "egg roll")
+    for food in foods:
+        print(food)
+
+
 if __name__ == "__main__":
     runall(import_module(__name__), "exercise")
