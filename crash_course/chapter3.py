@@ -1,4 +1,4 @@
-from util.runner import runall
+from util import runall
 from importlib import import_module
 
 
