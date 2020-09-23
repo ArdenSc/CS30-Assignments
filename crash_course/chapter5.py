@@ -149,10 +149,10 @@ def exercise9():
 
 
 def exercise10():
-    current_users = ["admin", "arden", "aarsh", "barnan", "brahm"]
-    new_users = ["joe", "jack", "jeff", "arden", "aarsh"]
+    current_users = ["admin", "Arden", "aarsh", "barnan", "brahm"]
+    new_users = ["joe", "jack", "jeff", "ARDEN", "aarsh"]
     for user in new_users:
-        if user in current_users:
+        if user.lower() in [user.lower() for user in current_users]:
             print(f"{user} is already in use. Please try another name.")
         else:
             print(f"{user} is available.")
