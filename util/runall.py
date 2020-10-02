@@ -10,5 +10,8 @@ def runall(module: ModuleType,
         item = getattr(module, i)
         if not callable(item): continue
         print(f"{i}\n")
-        item()
+        try:
+            item()
+        except KeyboardInterrupt:
+            print("CTRL-C detected, skipping this function")
         print()
