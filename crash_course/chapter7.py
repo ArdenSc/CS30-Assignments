@@ -50,5 +50,38 @@ def exercise7():
         print("Infinte loop")
 
 
+def exercise8():
+    sandwich_orders = ["BLT", "Italian", "Pastrami"]
+    finished_sandwiches = []
+    for order in sandwich_orders:
+        print(f"I made your {order} sandwich.")
+        finished_sandwiches.append(order)
+    print(f"All sandwiches made: {finished_sandwiches}")
+
+
+def exercise9():
+    sandwich_orders = ["BLT", "Italian", "Pastrami", "Pastrami", "Pastrami"]
+    print("The deli is out of pastrami.")
+    while sandwich_orders.count('Pastrami'):
+        sandwich_orders.remove('Pastrami')
+    finished_sandwiches = []
+    for order in sandwich_orders:
+        print(f"I made your {order} sandwich.")
+        finished_sandwiches.append(order)
+    print(f"All sandwiches made: {finished_sandwiches}")
+
+
+def exercise10():
+    locations = []
+    print("Enter quit at any time to stop the poll.")
+    while True:
+        response = input(
+            "If you could visit one place in the world, where would you go? ")
+        if response.lower() == "quit":
+            break
+        locations.append(response)
+    print(locations)
+
+
 if __name__ == "__main__":
     runall(import_module(__name__), "exercise")
