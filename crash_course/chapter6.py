@@ -98,5 +98,102 @@ def exercise6():
             print("Please take our poll.")
 
 
+def exercise7():
+    people = [{
+        "first_name": "Aarsh",
+        "last_name": "Shah",
+        "age": 17,
+        "city": "Regina",
+    }, {
+        "first_name": "Arden",
+        "last_name": "Sinclair",
+        "age": 17,
+        "city": "Regina",
+    }, {
+        "first_name": "Brahm",
+        "last_name": "Gainda",
+        "age": 17,
+        "city": "Regina",
+    }]
+    for person in people:
+        for k, v in person.items():
+            print(f"{k} is {v}")
+
+
+def exercise8():
+    pets = [{
+        "animal": "dog",
+        "owner": "aarsh",
+    }, {
+        "animal": "cat",
+        "owner": "arden",
+    }, {
+        "animal": "bird",
+        "owner": "brahm",
+    }]
+    for pet in pets:
+        for k, v in pet.items():
+            print(f"{k}: {v}")
+
+
+def exercise9():
+    favorite_places = {
+        "arden": ["uk", "japan"],
+        "aarsh": ["california", "paris"],
+        "barnan": ["rome", "russia"],
+    }
+    for name, places in favorite_places.items():
+        print(name.capitalize())
+        for place in places:
+            print(place)
+
+
+def exercise10():
+    favorite_numbers = {
+        "arden": [12, 345],
+        "aarsh": [9, 45345, 3453],
+        "barnan": [96, 34534, 56756],
+        "brahm": [69, 456, 7678, 4],
+        "jack": [1, 234, 6547, 567567],
+    }
+    for name, numbers in favorite_numbers.items():
+        print(f"{name.capitalize()}'s favorite numbers are:")
+        for number in numbers:
+            print(number)
+
+
+def exercise11():
+    cities = {
+        "vancouver": {
+            "country":
+            "canada",
+            "population":
+            675218,
+            "fact":
+            "Vancouver's Stanley Park is 10% larger than Central Park in \
+New York.",
+        },
+        "regina": {
+            "country": "canada",
+            "population": 228928,
+            "fact":
+            "Regina is the closest city to the centre of North America.",
+        },
+        "toronto": {
+            "country":
+            "canada",
+            "population":
+            2930000,
+            "fact":
+            "Toronto's Casa Loma is the only truly authentic castle in \
+North America.",
+        }
+    }
+    for city, data in cities.items():
+        print(f"{city.capitalize()}:")
+        for k, v in data.items():
+            print(f"- {k}: {v}")
+
+
 if __name__ == "__main__":
     runall(import_module(__name__), "exercise")
