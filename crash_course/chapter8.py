@@ -1,4 +1,4 @@
-from typing import Dict, Union
+from typing import Dict, List, Union
 from util import runall
 from importlib import import_module
 
@@ -47,6 +47,46 @@ def exercise8():
         if artist.lower() == "quit":
             break
         print(make_album(album, artist))
+
+
+def exercise9():
+    list = ["Hello there!", "How are you doing?", "I am good."]
+
+    def send_messages():
+        for text in list:
+            print(text)
+
+    send_messages()
+
+
+def exercise10():
+    list = ["Hello there!", "How are you doing?", "I am good."]
+    sent_messages = []
+
+    def send_messages(messages: List[str]):
+        while messages:
+            text = messages.pop()
+            print(text)
+            sent_messages.append(text)
+
+    send_messages(list)
+    print(list)
+    print(sent_messages)
+
+
+def exercise11():
+    list = ["Hello there!", "How are you doing?", "I am good."]
+    sent_messages = []
+
+    def send_messages(messages: List[str]):
+        while messages:
+            text = messages.pop()
+            print(text)
+            sent_messages.append(text)
+
+    send_messages(list[:])
+    print(list)
+    print(sent_messages)
 
 
 if __name__ == "__main__":
