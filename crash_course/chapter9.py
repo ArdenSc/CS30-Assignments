@@ -1,6 +1,7 @@
 from typing import List
 from util import runall
 from importlib import import_module
+from random import randint, choice
 
 
 def exercise1():
@@ -302,6 +303,55 @@ def exercise9():
     my_tesla.battery.get_range()
     my_tesla.battery.upgrade_battery()
     my_tesla.battery.get_range()
+
+
+def exercise13():
+    class Die:
+        def __init__(self, sides: int = 6):
+            self.sides = sides
+
+        def roll_die(self):
+            print(randint(1, self.sides))
+
+    die = Die()
+    for _ in range(10):
+        die.roll_die()
+    die = Die(10)
+    for _ in range(10):
+        die.roll_die()
+    die = Die(20)
+    for _ in range(10):
+        die.roll_die()
+
+
+def exercise14():
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c', 'd', 'e']
+    winning_ticket = []
+    for _ in range(4):
+        winning_ticket.append(str(choice(data)))
+    print("Any ticket matching these numbers and/or letters wins:")
+    print(' '.join(winning_ticket))
+
+
+def exercise15():
+    def get_winning_ticket() -> List[str]:
+        data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'b', 'c', 'd', 'e']
+        winning_ticket = []
+        for _ in range(4):
+            winning_ticket.append(str(choice(data)))
+        return winning_ticket
+
+    my_ticket = get_winning_ticket()
+    i = 0
+    while True:
+        i += 1
+        winning_ticket = get_winning_ticket()
+        for value in my_ticket:
+            if value not in winning_ticket:
+                break
+        else:
+            break
+    print(f"It took {i} loops to get a winning ticket.")
 
 
 if __name__ == "__main__":
